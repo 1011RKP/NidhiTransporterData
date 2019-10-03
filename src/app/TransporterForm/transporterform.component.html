@@ -1,0 +1,424 @@
+<form class="form-horizontal" role="form">
+  <div class="form-group row">
+    <div class="alert alert-success col-sm-6 tab-pane" *ngIf='message'>
+      <strong>Success!</strong> {{message}}
+    </div>
+    <div class="alert alert-danger col-sm-6 tab-pane" *ngIf='error'>
+      <strong>Danger!</strong> {{error}}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label textBold">Mechanism</label>
+    <label class="col-sm-2 col-form-label textBold">Tissue</label>
+    <label class="col-sm-1 col-form-label textBold">Transporter</label>
+    <label class="col-sm-2 col-form-label textBold">Input</label>
+    <label class="col-sm-2 col-form-label textBold">Value</label>
+    <label class="col-sm-2 col-form-label textBold">Input2</label>
+    <label class="col-sm-2 col-form-label textBold">Value2</label>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label">Uptake</label>
+    <label class="col-sm-2 col-form-label">Liver</label>
+    <label class="col-sm-1 col-form-label">OATP1B1</label>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control" [(ngModel)]='UptakeOATP1B1Input' name="UptakeOATP1B1Input">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='IC50'>IC50</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='UptakeOATP1B1Value' name="UptakeOATP1B1Value">
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control" [(ngModel)]='UptakeOATP1B1Input2' name="UptakeOATP1B1Input2">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='Highest Conc. Tested (uM)'>Highest Conc. Tested (uM)</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='UptakeOATP1B1Value2' name="UptakeOATP1B1Value2">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label">Uptake</label>
+    <label class="col-sm-2 col-form-label">Liver</label>
+    <label class="col-sm-1 col-form-label">OATP1B3</label>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control" [(ngModel)]='UptakeOATP1B3Input' name="UptakeOATP1B3Input">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='IC50'>IC50</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='UptakeOATP1B3Value' name="UptakeOATP1B3Value">
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control" [(ngModel)]='UptakeOATP1B3Input2' name="UptakeOATP1B3Input2">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='Highest Conc. Tested (uM)'>Highest Conc. Tested (uM)</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='UptakeOATP1B3Value2' name="UptakeOATP1B3Value2">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label">Uptake</label>
+    <label class="col-sm-2 col-form-label">Kidney</label>
+    <label class="col-sm-1 col-form-label">OAT1</label>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control" [(ngModel)]='UptakeOAT1Input' name="UptakeOAT1Input">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='IC50'>IC50</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='UptakeOAT1Value' name="UptakeOAT1Value">
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control" [(ngModel)]='UptakeOAT1Input2' name="UptakeOAT1Input2">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='Highest Conc. Tested (uM)'>Highest Conc. Tested (uM)</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='UptakeOAT1Value2' name="UptakeOAT1Value2">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label">Uptake</label>
+    <label class="col-sm-2 col-form-label">Kidney</label>
+    <label class="col-sm-1 col-form-label">OAT3</label>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control" [(ngModel)]='UptakeOAT3Input' name="UptakeOAT3Input">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='IC50'>IC50</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='UptakeOAT3Value' name="UptakeOAT3Value">
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control " [(ngModel)]='UptakeOAT3Input2' name="UptakeOAT3Input2">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='Highest Conc. Tested (uM)'>Highest Conc. Tested (uM)</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='UptakeOAT3Value2' name="UptakeOAT3Value2">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label">Uptake</label>
+    <label class="col-sm-2 col-form-label">Kidney</label>
+    <label class="col-sm-1 col-form-label">OCT2</label>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control" [(ngModel)]='UptakeOCT2Input' name="UptakeOCT2Input">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='IC50'>IC50</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='UptakeOCT2Value' name="UptakeOCT2Value">
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control " [(ngModel)]='UptakeOCT2Input2' name="UptakeOCT2Input2">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='Highest Conc. Tested (uM)'>Highest Conc. Tested (uM)</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='UptakeOCT2Value2' name="UptakeOCT2Value2">
+    </div>
+  </div>
+  <div class="form-group row divpadding">
+    <label class="col-sm-offset-3 col-sm-1 col-form-label textBold textaligncenter">URL</label>
+    <div class="col-sm-8 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='UptakeURL' name="UptakeURL">
+    </div>
+  </div>
+  <div class="form-group row divpadding">
+    <label class="col-sm-offset-3 col-sm-1 col-form-label textBold textaligncenter">Comment</label>
+    <div class="col-sm-8 divpaddinglftrit">
+      <textarea row="2" class="form-control" type="text" [(ngModel)]='UptakeComment' name="UptakeComment"></textarea>
+      <span>Note : Add EWB and report number here.</span>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label">Efflux</label>
+    <label class="col-sm-2 col-form-label">Kidney/Liver</label>
+    <label class="col-sm-1 col-form-label">MATE1</label>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control" [(ngModel)]='EffluxMATE1Input' name="EffluxMATE1Input">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='IC50'>IC50</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='EffluxMATE1Value' name="EffluxMATE1Value">
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control " [(ngModel)]='EffluxMATE1Input2' name="EffluxMATE1Input2">
+        <!-- <!-- <option value="">-- Select Input --</option> -->-->
+        <option value='Highest Conc. Tested (uM)'>Highest Conc. Tested (uM)</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='EffluxMATE1Value2' name="EffluxMATE1Value2">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label">Efflux</label>
+    <label class="col-sm-2 col-form-label">Kidney</label>
+    <label class="col-sm-1 col-form-label">MATE2K</label>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control" [(ngModel)]='EffluxMATE2KInput' name="EffluxMATE2KInput">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='IC50'>IC50</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='EffluxMATE2KValue' name="EffluxMATE2KValue">
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control " [(ngModel)]='EffluxMATE2KInput2' name="EffluxMATE2KInput2">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='Highest Conc. Tested (uM)'>Highest Conc. Tested (uM)</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='EffluxMATE2KValue2' name="EffluxMATE2KValue2">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label">Efflux</label>
+    <label class="col-sm-2 col-form-label">Gut/Liver/Brain</label>
+    <label class="col-sm-1 col-form-label">BCRP</label>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control" [(ngModel)]='EffluxBCRPInput' name="EffluxBCRPInput">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='IC50'>IC50</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='EffluxBCRPValue' name="EffluxBCRPValue">
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control " [(ngModel)]='EffluxBCRPInput2' name="EffluxBCRPInput2">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='Highest Conc. Tested (uM)'>Highest Conc. Tested (uM)</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='EffluxBCRPValue2' name="EffluxBCRPValue2">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label">Efflux</label>
+    <label class="col-sm-2 col-form-label">Gut/Liver/Brain/Kindney</label>
+    <label class="col-sm-1 col-form-label">P-gp</label>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control" [(ngModel)]='EffluxPgpInput' name="EffluxPgpInput">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='IC50'>IC50</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='EffluxPgpValue' name="EffluxPgpValue">
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <select class="form-control " [(ngModel)]='EffluxPgpInput2' name="EffluxPgpInput2">
+        <!-- <option value="">-- Select Input --</option> -->
+        <option value='Highest Conc. Tested (uM)'>Highest Conc. Tested (uM)</option>
+      </select>
+    </div>
+    <div class="col-sm-2 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='EffluxPgpValue2' name="EffluxPgpValue2">
+    </div>
+  </div>
+  <div class="form-group row divpadding">
+    <label class="col-sm-offset-3 col-sm-1 col-form-label textBold textaligncenter">URL</label>
+    <div class="col-sm-8 divpaddinglftrit">
+      <input class="form-control" type="text" [(ngModel)]='EffluxURL' name="EffluxURL">
+    </div>
+  </div>
+  <div class="form-group row" style="padding-bottom: 15px;">
+    <label class="col-sm-offset-3 col-sm-1 col-form-label textBold textaligncenter">Comment</label>
+    <div class="col-sm-8 divpaddinglftrit">
+      <textarea row="2" class="form-control" type="text" [(ngModel)]='EffluxComment' name="EffluxComment"></textarea>
+      <span>Note : Add EWB and report number here.</span>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="panel-body">
+      <div class="modal-body row">
+        <div class="col-md-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h6 class="panel-title">Transporter Data Input: Incyte drug as Victim</h6>
+              <!-- <a href="" style="float:right;">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </a> -->
+            </div>
+            <div class="panel-body">
+              <div class="form-group row">
+                <label class="col-sm-1 col-form-label textBold">Mechanism</label>
+                <label class="col-sm-2 col-form-label textBold">Tissue</label>
+                <label class="col-sm-2 col-form-label textBold">Transporter</label>
+                <label class="col-sm-3 col-form-label textBold">Is this compound a substrate</label>
+                <!-- <label class="col-sm-2 col-form-label textBold">Substrate</label> -->
+                <label class="col-sm-4 col-form-label textBold">Comment</label>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Uptake</label>
+                <label class="col-sm-2 col-form-label">Liver</label>
+                <label class="col-sm-2 col-form-label">OATP1B1</label>
+                <div class="col-sm-3 divpaddinglftrit">
+                  <select class="form-control" [(ngModel)]='SubstrateBCRPOATP1B1' name="SubstrateBCRPOATP1B1">
+                    <option value='Not Tested'>Not Tested</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="col-sm-4 divpaddinglftrit">
+                  <input class="form-control" type="text" [(ngModel)]='ComOATP1B1' name="ComOATP1B1">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Uptake</label>
+                <label class="col-sm-2 col-form-label">Liver</label>
+                <label class="col-sm-2 col-form-label">OATP1B3</label>
+                <div class="col-sm-3 divpaddinglftrit">
+                  <select class="form-control" [(ngModel)]='SubstrateBCRPOATP1B3' name="SubstrateBCRPOATP1B3">
+                    <option value='Not Tested'>Not Tested</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="col-sm-4 divpaddinglftrit">
+                  <input class="form-control" type="text" [(ngModel)]='ComOATP1B3' name="ComOATP1B3">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Uptake</label>
+                <label class="col-sm-2 col-form-label">Kidney</label>
+                <label class="col-sm-2 col-form-label">OAT1</label>
+                <div class="col-sm-3 divpaddinglftrit">
+                  <select class="form-control" [(ngModel)]='SubstrateOAT1' name="SubstrateOAT1">
+                    <option value='Not Tested'>Not Tested</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="col-sm-4 divpaddinglftrit">
+                  <input class="form-control" type="text" [(ngModel)]='ComOAT1' name="ComOAT1">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Uptake</label>
+                <label class="col-sm-2 col-form-label">Kidney</label>
+                <label class="col-sm-2 col-form-label">OAT3</label>
+                <div class="col-sm-3 divpaddinglftrit">
+                  <select class="form-control" [(ngModel)]='SubstrateOAT3' name="SubstrateOAT3">
+                    <option value='Not Tested'>Not Tested</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="col-sm-4 divpaddinglftrit">
+                  <input class="form-control" type="text" [(ngModel)]='ComOAT3' name="ComOAT3">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Uptake</label>
+                <label class="col-sm-2 col-form-label">Kidney</label>
+                <label class="col-sm-2 col-form-label">OAT2</label>
+                <div class="col-sm-3 divpaddinglftrit">
+                  <select class="form-control" [(ngModel)]='SubstrateOAT2' name="SubstrateOAT2">
+                    <option value='Not Tested'>Not Tested</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="col-sm-4 divpaddinglftrit">
+                  <input class="form-control" type="text" [(ngModel)]='ComOAT2' name="ComOAT2">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Efflux</label>
+                <label class="col-sm-2 col-form-label">Kidney/Liver</label>
+                <label class="col-sm-2 col-form-label">MATE1</label>
+                <div class="col-sm-3 divpaddinglftrit">
+                  <select class="form-control" [(ngModel)]='SubstrateMATE1' name="SubstrateMATE1">
+                    <option value='Not Tested'>Not Tested</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="col-sm-4 divpaddinglftrit">
+                  <input class="form-control" type="text" [(ngModel)]='ComMATE1' name="ComMATE1">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Efflux</label>
+                <label class="col-sm-2 col-form-label">Kidney</label>
+                <label class="col-sm-2 col-form-label">MATE2K</label>
+                <div class="col-sm-3 divpaddinglftrit">
+                  <select class="form-control" [(ngModel)]='SubstrateMATE2K' name="SubstrateMATE2K">
+                    <option value='Not Tested'>Not Tested</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="col-sm-4 divpaddinglftrit">
+                  <input class="form-control" type="text" [(ngModel)]='ComMATE2K' name="ComMATE2K">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Efflux</label>
+                <label class="col-sm-2 col-form-label">GUT/Liver/Brain</label>
+                <label class="col-sm-2 col-form-label">BCRP</label>
+                <div class="col-sm-3 divpaddinglftrit">
+                  <select class="form-control" [(ngModel)]='SubstrateBCRPNew' name="SubstrateBCRPNew">
+                    <option value='Not Tested'>Not Tested</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="col-sm-4 divpaddinglftrit">
+                  <input class="form-control" type="text" [(ngModel)]='ComBCRP' name="ComBCRP">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-1 col-form-label">Efflux</label>
+                <label class="col-sm-2 col-form-label">GUT/Liver/Brain/kidney</label>
+                <label class="col-sm-2 col-form-label">P-gp</label>
+                <div class="col-sm-3 divpaddinglftrit">
+                  <select class="form-control" [(ngModel)]='SubstratePGP' name="SubstratePGP">
+                    <option value='Not Tested'>Not Tested</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="col-sm-4 divpaddinglftrit">
+                  <input class="form-control" type="text" [(ngModel)]='ComPGP' name="ComPGP">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-offset-2 col-sm-3 col-form-label textBold textaligncenter">URL</label>
+                <div class="col-sm-7 divpaddinglftrit">
+                  <input class="form-control" type="text" [(ngModel)]='VictimURL' name="VictimURL">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row divpadding">
+    <div class="col-sm-offset-6 col-sm-6 divpaddinglftrit">
+      <button type="submit" class="btn btn-primary" (click)='saveClick()'>Save Record</button>
+    </div>
+  </div>
+</form>
